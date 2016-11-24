@@ -8,6 +8,7 @@ export HISTIGNORE="&:ls[bf]g:exit"
 # Aliases
 alias vimrc="vim ~/rc/.bashrc; . ~/rc/.bashrc"
 alias myip="curl http://ipecho.net/plain; echo"
+alias gl="git log --oneline"
 
 # Functions
 function up() {

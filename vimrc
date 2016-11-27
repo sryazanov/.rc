@@ -24,9 +24,7 @@ filetype plugin indent on
 syntax enable
 au FileType javascript set expandtab tabstop=2 shiftwidth=2
 
-nmap <silent> <C-I> :bp<cr>
 nmap <silent> <C-i> :bn<cr>
-nmap <silent> <C-U> :bd<cr>
 
 set laststatus=2
 set mouse=a

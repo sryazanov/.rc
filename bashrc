@@ -6,9 +6,10 @@ HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls[bf]g:exit"
 
 # Aliases
-alias vimrc="vim ~/rc/.bashrc; . ~/rc/.bashrc"
-alias myip="curl http://ipecho.net/plain; echo"
 alias gl="git log --oneline"
+alias myip="curl http://ipecho.net/plain; echo"
+alias pull-rc="git -C ~/.rc pull --recurse-submodules && . ~/.bashrc"
+alias vimrc="vim ~/rc/.bashrc; . ~/rc/.bashrc"
 
 # Functions
 function up() {

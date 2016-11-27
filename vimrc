@@ -26,5 +26,7 @@ au FileType javascript set expandtab tabstop=2 shiftwidth=2
 
 nmap <silent> <C-i> :bn<cr>
 
+set ttyfast
 set laststatus=2
+set ttymouse=xterm2
 set mouse=a

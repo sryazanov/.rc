@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 nmap <silent> <C-u> :NERDTreeToggle<cr>
@@ -23,6 +24,7 @@ let g:ctrlp_custom_ignore = {
 filetype plugin indent on
 syntax enable
 au FileType javascript set expandtab tabstop=2 shiftwidth=2
+au FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 nmap <silent> <C-i> :bn<cr>
 
@@ -30,3 +32,4 @@ set ttyfast
 set laststatus=2
 set ttymouse=xterm2
 set mouse=a
+set nu

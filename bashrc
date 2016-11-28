@@ -46,3 +46,7 @@ function extract() {
     fi
   fi
 }
+
+if { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  PS1="\w "
+fi

@@ -25,8 +25,11 @@ let g:ctrlp_custom_ignore = {
 
 filetype plugin indent on
 syntax enable
-au FileType javascript set expandtab tabstop=2 shiftwidth=2
+au FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent fileformat=unix
 au FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+
+" :e %%<TAB>filena<TAB> - open a file in directory of currnt file
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 set hidden " Allows buffer to be hidden if you've modified the buffer.
 nmap <leader>s :bp<cr>

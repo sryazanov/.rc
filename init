@@ -1,5 +1,19 @@
 #/usr/bin/bash
 
+if [[ $(which npm) ]]; then
+    'NodeJS installed'
+else
+    echo 'Please install node js'
+    exit
+fi
+
+if [[ $(npm list -g --depth=1 --parseable | grep '/tern/') ]]; then
+    echo 'tern installed';
+else
+    echo 'Installing tern'
+    sudo npm install -g tern
+fi
+
 rm -rf ~/.vim
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -9,3 +23,5 @@ echo "source ~/.rc/vimrc" > ~/.vimrc
 echo "source ~/.rc/tmux.conf" > ~/.tmux.conf
 echo "source ~/.rc/tmux-powerlinerc" > ~/.tmux-powerlinerc
 vim +PlugInstall +qall
+
+python3 ~/.vim/plugged/YouCompleteMe/install.py --tern-completer --clang-completer

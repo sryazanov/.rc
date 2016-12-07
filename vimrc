@@ -1,9 +1,12 @@
 " source ~/rc/.vimrc
 
 call plug#begin()
+
+Plug 'Valloric/YouCompleteMe'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
@@ -11,6 +14,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
+
 call plug#end()
 
 nmap <silent> <leader>t :NERDTreeToggle<cr>
@@ -41,3 +45,8 @@ set laststatus=2
 set ttymouse=xterm2
 set mouse=a
 set nu
+
+nmap <F8> :TagbarToggle<CR>
+nmap gd :YcmCompleter GoTo<CR>
+nmap gt :YcmCompleter GetType<CR>
+nmap gr :YcmCompleter GoToReferences<CR>

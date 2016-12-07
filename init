@@ -1,7 +1,7 @@
 #/usr/bin/bash
 
 if [[ $(which npm) ]]; then
-    'NodeJS installed'
+    echo 'NodeJS installed'
 else
     echo 'Please install node js'
     exit

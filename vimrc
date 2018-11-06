@@ -31,6 +31,7 @@ filetype plugin indent on
 syntax enable
 au FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent fileformat=unix
 au FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au FileType cpp set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=100 expandtab autoindent fileformat=unix
 
 " :e %%<TAB>filena<TAB> - open a file in directory of currnt file
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
